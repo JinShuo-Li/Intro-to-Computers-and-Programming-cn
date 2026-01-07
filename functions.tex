@@ -1,26 +1,13 @@
 \documentclass[a4paper, 12pt]{article}
 
-% 引入中文支持
 \usepackage[UTF8]{ctex}
-
-% 页面边距设置
 \usepackage{geometry}
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
-
-% 列表宏包，用于自定义编号和间距
 \usepackage{enumitem}
-
-% 颜色宏包
 \usepackage{xcolor}
-
-% 超链接宏包
 \usepackage{hyperref}
-
-% 定义代码样式的命令 (等宽字体 + 深蓝色)
 \newcommand{\code}[1]{\texttt{\color{blue!60!black}#1}}
-\newcommand{\kw}[1]{\textbf{#1}} % 关键词加粗
-
-% 自定义 001, 002 样式的计数器显示
+\newcommand{\kw}[1]{\textbf{#1}}
 \newcommand{\threedigits}[1]{%
   \ifnum#1<10 00#1%
   \else\ifnum#1<100 0#1%
@@ -35,8 +22,6 @@
 \begin{document}
 
 \maketitle
-
-% 设置正文列表
 \begin{enumerate}[label=\textbf{\protect\threedigits{\value*}.}, leftmargin=3.5em, itemsep=0.8ex, parsep=0.5ex]
 
     \item \code{print()}
@@ -259,5 +244,6 @@
     \item \kw{LEGB}: 查询顺序: 局部作用域 (Local) $\to$ 外层函数作用域 (Enclosing) $\to$ 全局作用域 (Global) $\to$ 内置作用域 (Built-in)。
 
 \end{enumerate}
+
 
 \end{document}
