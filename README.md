@@ -5,6 +5,10 @@
 ### Overview
 This repository contains a comprehensive final review cheating sheet for the course "Introduction to Computation with Python Programming". The document is written in LaTeX and covers essential topics from Linux commands to advanced Python concepts, designed to help students prepare for exams efficiently.
 
+If you would like to learn more about this course, please visit via this link:[CS1602: Introduction to Computation](https://github.com/ichengfan/itc)
+
+Many thanks to Professor Cheng Fan and Professor Fu Hongfei for their teaching.
+
 ### Key Topics Covered
 - Linux & Python Common Commands
 - Basic Python Types and Operations
