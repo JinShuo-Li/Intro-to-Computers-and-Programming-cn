@@ -14,9 +14,6 @@
 \usepackage{longtable}
 \usepackage{float} % 更好的浮动体控制
 
-%----------------------------------------------------------------------------------------
-%	页面设置
-%----------------------------------------------------------------------------------------
 \geometry{
     a4paper,
     top=2.5cm,
@@ -25,10 +22,8 @@
     right=2.5cm
 }
 
-% 【修复报错1】设置页眉高度，fancyhdr通常需要更大一点的高度
 \setlength{\headheight}{26pt} 
 
-% 链接设置
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
@@ -37,16 +32,12 @@
     pdftitle={Python 计算导论},
 }
 
-% 页眉页脚
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{\textbf{Python 计算导论}}
 \rhead{期末复习}
 \cfoot{\thepage}
 
-%----------------------------------------------------------------------------------------
-%	代码高亮设置
-%----------------------------------------------------------------------------------------
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -72,33 +63,25 @@
     tabsize=4,
     frame=single, 
     rulecolor=\color{codegray},
-    extendedchars=true, % 解决中文代码注释可能不显示的问题
-    escapeinside=``     % 允许在代码中使用LaTeX命令
+    extendedchars=true,
+    escapeinside=``
 }
 \lstset{style=mystyle, language=Python}
 
-%----------------------------------------------------------------------------------------
-%	自定义环境
-%----------------------------------------------------------------------------------------
-% 重点提示框
 \newtcolorbox{importantbox}[1]{
     colback=blue!5!white,
     colframe=blue!75!black,
-    fonttitle=\bfseries\sffamily, % 【修复关键】使用无衬线字体(黑体)以支持加粗
+    fonttitle=\bfseries\sffamily, 
     title={#1}
 }
 
-% 避坑指南框 (红色)
 \newtcolorbox{trapbox}[1]{
     colback=red!5!white,
     colframe=red!75!black,
-    fonttitle=\bfseries\sffamily, % 【修复关键】使用无衬线字体(黑体)以支持加粗
+    fonttitle=\bfseries\sffamily,
     title={\textbf{[!]} 考试指南：#1}
 }
 
-%----------------------------------------------------------------------------------------
-%	文档开始
-%----------------------------------------------------------------------------------------
 \begin{document}
 
 \title{\Huge \textbf{计算导论与 Python 编程}\\ \LARGE 期末复习}
@@ -1982,5 +1965,6 @@ def say_hello():
 # 等价于:
 # say_hello = my_decorator(say_hello)
 \end{lstlisting}
+
 
 \end{document}
